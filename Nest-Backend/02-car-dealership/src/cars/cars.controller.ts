@@ -1,17 +1,19 @@
 /* eslint-disable prettier/prettier */
-import { Controller, Delete, Get, Patch, Post } from '@nestjs/common';
+import { Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 
 @Controller('cars')
 export class CarsController {
   
   @Get()
   getAllCars() {
+    console.log('listar');
     return ['Listado de Cars'];
   }
 
   @Get(':id')
-  getCarById() {
-    return ['Listado de un Car'];
+  getCarById( @Param('id') id: string ) {
+    return `Listado de Car ${ id }`;
+    console.log(id);
   }
 
   @Post()
@@ -19,14 +21,13 @@ export class CarsController {
     return ['Creado de Cars'];
   }
 
-  @Patch()
-  updateCar() {
-    return ['Actualizado de Cars'];
+  @Patch(':id')
+  updateCar( @Param('id') id: string ) {
+    return `Actualizado de Car ${ id }`;
   }
 
-  @Delete()
-  deleteCar() 
-  {
-    return ['Borrado de Cars'];
+  @Delete(':id')
+  deleteCar( @Param('id') id: string ) {
+    return `Borrado de Car ${ id }`;
   }
 }
