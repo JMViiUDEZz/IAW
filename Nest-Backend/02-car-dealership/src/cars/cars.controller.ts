@@ -1,13 +1,16 @@
 /* eslint-disable prettier/prettier */
 import { Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { CarsService } from './cars.service';
 
 @Controller('cars')
 export class CarsController {
+
+  constructor(private readonly CarsService: CarsService) {}
   
   @Get()
   getAllCars() {
     console.log('listar');
-    return ['Listado de Cars'];
+    return this.CarsService.findAll();
   }
 
   @Get(':id')
