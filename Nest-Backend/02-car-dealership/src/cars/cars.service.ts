@@ -6,22 +6,22 @@ export class CarsService {
 
     private cars = [
         {
-            id: '1',
+            id: 1,
             brand: 'Toyota',
             model: 'Corola'
         },
         {
-            id: '2',
+            id: 2,
             brand: 'Honda',
             model: 'Civic'
         },
         {
-            id: '3',
+            id: 3,
             brand: 'Jeep',
             model: 'Cherokee'
         },
         {
-            id: '4',
+            id: 4,
             brand: 'Audi',
             model: 'A4'
         }
@@ -32,9 +32,9 @@ export class CarsService {
         return this.cars;
     }
     
-    findOneById(id: string){
+    findOneById(id: number){
         console.log (id);
-        const car = this.cars.find(car => car.id === id);
+        const car = this.cars.find(car => car.id === +id);
         if (!car){
             throw new NotFoundException(`Car with id '${ id }' not found`);
         }

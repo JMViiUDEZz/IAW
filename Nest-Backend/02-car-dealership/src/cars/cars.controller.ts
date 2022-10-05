@@ -15,7 +15,7 @@ export class CarsController {
   }
 
   @Get(':id')
-  getCarById( @Param('id') id: string ) {
+  getCarById( @Param('id') id: number ) {
     // return `Listado de Car ${ id }`;
     return this.carsService.findOneById(id);
     console.log(id);
