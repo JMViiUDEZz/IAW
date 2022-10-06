@@ -1,6 +1,6 @@
-/* eslint-disable prettier/prettier */
-import { Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
 import { CarsService } from './cars.service';
+import { ICar } from './interfaces/car.interface';
 
 @Controller('cars')
 export class CarsController {
@@ -22,17 +22,20 @@ export class CarsController {
   }
 
   @Post()
-  newCar() {
-    return ['Creado de Cars'];
+  create( @Body() dataCar: ICar ) {
+    // return ['Creado de Cars'];
+    return this.carsService.create(dataCar);
+
   }
 
   @Patch(':id')
-  updateCar( @Param('id') id: string ) {
+  updateCar( @Param('id') id: number ) {
     return `Actualizado de Car ${ id }`;
   }
 
   @Delete(':id')
-  deleteCar( @Param('id') id: string ) {
-    return `Borrado de Car ${ id }`;
+  deleteCar( @Param('id') id: number ) {
+    // return `Borrado de Car ${ id }`;
+    return this.carsService.delete(id);
   }
 }

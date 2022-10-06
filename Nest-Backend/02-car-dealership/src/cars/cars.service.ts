@@ -1,10 +1,10 @@
-/* eslint-disable prettier/prettier */
 import { Injectable, NotFoundException } from '@nestjs/common';
+import { ICar } from './interfaces/car.interface';
 
 @Injectable()
 export class CarsService {
 
-    private cars = [
+    private cars: ICar[] = [
         {
             id: 1,
             brand: 'Toyota',
@@ -28,7 +28,6 @@ export class CarsService {
     ];
 
     public findAll() {
-        // console.log(this.cars);
         return this.cars;
     }
     
@@ -38,7 +37,27 @@ export class CarsService {
         if (!car){
             throw new NotFoundException(`Car with id '${ id }' not found`);
         }
-        // return this.cars[id];
         return car;
     }
+
+    create ( dataCar: ICar){
+        const ultimo = this.cars[this.cars.length - 1];
+        console.log(ultimo);
+        dataCar.id = ultimo.id + 1;
+        this.cars.push(dataCar);
+        return dataCar;
+    }
+
+    delete (id: number){
+        // 1ª FORMA: filter()
+        const carDB = this.findOneById(id);    
+        this.cars = this.cars.filter(car => car.id != id);
+        return `Borrado de Car ${ id }`; 
+
+        // 2ª FORMA: splice() --> SOLO FUNCIONA SI LOS COCHES ESTÁN ORDENADOS POR ID
+        //                        EN NUESTRO CASO, SI FUNCIONA
+        // const posicion = id - 1;
+        // this.cars.splice(posicion,1)
+    }
 }
+
