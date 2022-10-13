@@ -18,7 +18,7 @@ export class CarsController {
   getCarById( @Param('id') id: number ) {
     // return `Listado de Car ${ id }`;
     return this.carsService.findOneById(id);
-    console.log(id);
+    // console.log(id);
   }
 
   @Post()
@@ -29,8 +29,10 @@ export class CarsController {
   }
 
   @Patch(':id')
-  updateCar( @Param('id') id: number ) {
-    return `Actualizado de Car ${ id }`;
+  updateCar( @Param('id') id: number,
+    // return `Actualizado de Car ${ id }`;
+    @Body() dataCar: ICar){
+    return this.carsService.update(id, dataCar);
   }
 
   @Delete(':id')

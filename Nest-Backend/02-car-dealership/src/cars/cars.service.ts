@@ -59,5 +59,23 @@ export class CarsService {
         // const posicion = id - 1;
         // this.cars.splice(posicion,1)
     }
-}
 
+    update (id: number, dataCar: ICar){
+        let carDB = this.findOneById(id);
+        //map devuelva un array de cars
+        this.cars = this.cars.map ( car => { 
+            if (car.id === +id){ //id actualizado a tipo number
+                carDB = {
+                    ...carDB, //todos los campos de la BD
+                    ...dataCar, //se sobreescriben con los campos de la Request
+                    // id //
+                }
+                return carDB //el car modificado
+            }
+            return car //el mismo car
+        });
+        //devolvamos el carDB actualizador
+        return carDB;
+    }
+
+}
