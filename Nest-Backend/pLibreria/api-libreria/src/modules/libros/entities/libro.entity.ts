@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity({ name: 'clientes' })
-export class Cliente {
+@Entity({ name: 'libros' })
+export class Libro {
    @PrimaryGeneratedColumn('increment')
    id: number;
  
@@ -13,15 +13,11 @@ export class Cliente {
    @Column('text', {
         unique: true,
    })
-   email: string;
- 
-   @Column('text', {
-        unique: true,
-   })
-   github: string;
- 
+   titulo: string;
+
    @Column('text', {
         unique:true,
-   })
-   twitter: string;
+    })
+    editorial: string;
+
 }
