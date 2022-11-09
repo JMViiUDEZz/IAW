@@ -1,4 +1,4 @@
-import { IsIn, IsOptional, IsString, MinLength } from "class-validator";
+import { IsOptional, IsString, MinLength } from "class-validator";
 
 export class CreateClienteDto {
     @IsString()
@@ -23,11 +23,5 @@ export class CreateClienteDto {
     @MinLength(1)
     @IsOptional()
     twitter?: string;
-
-    @IsString()
-    @MinLength(1)
-    @IsOptional()
-    @IsIn(['anaya', 'marcombo'])
-    editorial?: string;
  }
  
