@@ -41,7 +41,7 @@ export class Libro {
      longDescription: string;
 
      @Column('text', {
-          unique:true,
+          // unique:true,
      })
      status: string;
 
