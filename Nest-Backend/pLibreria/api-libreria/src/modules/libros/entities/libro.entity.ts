@@ -16,32 +16,32 @@ export class Libro {
      isbn: string;
 
      @Column('integer', {
-          unique:true,
+          default: 0,
      })
      pageCount: number;
 
-     @Column('text', {
-          unique:true,
+     @Column({
+          type:'text',
      })
      publishedDate: string;
 
      @Column('text', {
-          unique:true,
+          unique: true,
      })
      thumbnailUrl: string;
 
      @Column('text', {
-          unique:true,
+          nullable: true,
      })
      shortDescription: string;
 
      @Column('text', {
-          unique:true,
+          nullable: true,
      })
      longDescription: string;
 
      @Column('text', {
-          // unique:true,
+          // unique: true,
      })
      status: string;
 
