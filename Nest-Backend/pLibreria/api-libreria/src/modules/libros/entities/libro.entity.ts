@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({ name: 'libros' })
 export class Libro {
@@ -47,4 +47,9 @@ export class Libro {
 
      // authors: string;
 
+     @BeforeInsert()
+     checkTitleInsert() {
+         this.title = this.title
+             .toUpperCase()
+     }
 }
