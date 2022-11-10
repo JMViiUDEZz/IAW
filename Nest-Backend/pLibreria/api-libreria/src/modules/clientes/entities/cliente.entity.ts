@@ -1,4 +1,4 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity({ name: 'clientes' })
 export class Cliente {
@@ -31,4 +31,19 @@ export class Cliente {
      twitter?: string;
 
     //  books?: string;
+
+     @BeforeInsert()
+     checkUrlInsert() {
+          if ( !this.website.includes('https://' )) {
+               this.website = `https://${this.website}`;
+          }
+
+          if ( !this.github.includes('https://github.com/' )) {
+               this.github = `https://github.com/${this.github}`;
+          }
+
+          if ( !this.twitter.includes('https://twitter.com/' )) {
+               this.twitter = `https://twitter.com/${this.twitter}`;
+          }
+     }
 }
