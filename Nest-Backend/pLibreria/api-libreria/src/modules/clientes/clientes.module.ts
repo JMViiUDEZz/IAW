@@ -9,7 +9,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
   controllers: [ClientesController],
   providers: [ClientesService],
   imports: [
-    TypeOrmModule.forFeature([Cliente]) //importamos todas las entidades
+    TypeOrmModule.forFeature([Cliente])
   ],
   exports: [ ClientesService, TypeOrmModule ]
 

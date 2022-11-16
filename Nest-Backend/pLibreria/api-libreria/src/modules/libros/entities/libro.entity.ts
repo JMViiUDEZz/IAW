@@ -52,7 +52,8 @@ export class Libro {
      @ManyToOne(
           () => Cliente,
           ( cliente ) => cliente.libros,
-          { onDelete: 'CASCADE' }
+          // { onDelete: 'CASCADE' }
+          { cascade: false }
      )
      cliente: Cliente;
 

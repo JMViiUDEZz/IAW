@@ -35,8 +35,10 @@ export class Cliente {
      @OneToMany(
           () => Libro,
           (libro) => libro.cliente,
+          // lo mas sensato sería establecer la relación con eliminación en cascada,
+          // haciéndolo de esta manera: { cascade: true, eager: true }
+          // en nuestro caso, no
           { cascade: false }
-          // { cascade: true, eager: true }
      )
      libros?: Libro[];
 

@@ -33,7 +33,12 @@ export class ClientesService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} cliente`;
+    // return `This action returns a #${id} cliente`;
+    // DESPUES DE RELACION
+    return this.clienteRepository.findOne({
+      where:
+        {id: id}
+    });
   }
 
   update(id: number, updateClienteDto: UpdateClienteDto) {

@@ -3,11 +3,13 @@ import { LibrosService } from './libros.service';
 import { LibrosController } from './libros.controller';
 import { Libro } from './entities/libro.entity';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ClientesModule } from '../clientes/clientes.module';
 
 @Module({
   controllers: [LibrosController],
   providers: [LibrosService],
   imports: [
+    ClientesModule,
     TypeOrmModule.forFeature([Libro]) //importamos todas las entidades
   ],
   exports: [ LibrosService, TypeOrmModule ]
