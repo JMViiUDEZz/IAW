@@ -1,4 +1,5 @@
-import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, Column, Entity, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Cliente } from '../../clientes/entities/cliente.entity';
 
 @Entity({ name: 'libros' })
 export class Libro {
@@ -45,7 +46,15 @@ export class Libro {
      })
      status: string;
 
-     // authors: string;
+     // authors
+     
+     // clients (sin definir en la data)
+     @ManyToOne(
+          () => Cliente,
+          ( cliente ) => cliente.libros,
+          { onDelete: 'CASCADE' }
+     )
+     cliente: Cliente;
 
      @BeforeInsert()
      checkTitleInsert() {

@@ -1,4 +1,5 @@
-import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BeforeInsert, Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
+import { Libro } from '../../libros/entities/libro.entity';
 
 @Entity({ name: 'clientes' })
 export class Cliente {
@@ -30,7 +31,14 @@ export class Cliente {
      })
      twitter?: string;
 
-    //  books?: string;
+    // books
+     @OneToMany(
+          () => Libro,
+          (libro) => libro.cliente,
+          { cascade: false }
+          // { cascade: true, eager: true }
+     )
+     libros?: Libro[];
 
      @BeforeInsert()
      checkUrlInsert() {
