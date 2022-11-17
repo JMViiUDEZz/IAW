@@ -17,18 +17,18 @@ export class ClientesController {
     return this.clientesService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.clientesService.findOne(id);
+  @Get(':idC')
+  findOne(@Param('idC') idC: string) {
+    return this.clientesService.findOne(idC);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateClienteDto: UpdateClienteDto) {
-    return this.clientesService.update(id, updateClienteDto);
+  @Patch(':idC')
+  update(@Param('idC') idC: string, @Body() updateClienteDto: UpdateClienteDto) {
+    return this.clientesService.update(idC, updateClienteDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.clientesService.remove(id);
+  @Delete(':idC')
+  remove(@Param('idC') idC: string) {
+    return this.clientesService.remove(idC);
   }
 }

@@ -19,6 +19,7 @@ export class ClientesService {
     // return 'This action adds a new cliente';
     try {
       const cliente = this.clienteRepository.create(createClienteDto);
+      console.log(cliente);
       await this.clienteRepository.save(cliente);
       return cliente;
     } catch (error) {
@@ -32,12 +33,12 @@ export class ClientesService {
     return this.clienteRepository.find({});
   }
 
-  findOne(id: string) {
-    // return `This action returns a #${id} cliente`;
+  findOne(idC: string) {
+    // return `This action returns a #${idC} cliente`;
     // DESPUES DE RELACION
     return this.clienteRepository.findOne({
       where: { 
-        id 
+        idC
       },
       relations: { 
         libros: true
@@ -45,11 +46,11 @@ export class ClientesService {
     });
   }
 
-  update(id: string, updateClienteDto: UpdateClienteDto) {
-    return `This action updates a #${id} cliente`;
+  update(idC: string, updateClienteDto: UpdateClienteDto) {
+    return `This action updates a #${idC} cliente`;
   }
 
-  remove(id: string) {
-    return `This action removes a #${id} cliente`;
+  remove(idC: string) {
+    return `This action removes a #${idC} cliente`;
   }
 }

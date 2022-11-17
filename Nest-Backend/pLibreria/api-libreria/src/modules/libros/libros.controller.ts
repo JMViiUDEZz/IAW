@@ -17,18 +17,18 @@ export class LibrosController {
     return this.librosService.findAll();
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.librosService.findOne(id);
+  @Get(':idL')
+  findOne(@Param('idL') idL: string) {
+    return this.librosService.findOne(idL);
   }
 
-  @Patch(':id')
-  update(@Param('id') id: string, @Body() updateLibroDto: UpdateLibroDto) {
-    return this.librosService.update(id, updateLibroDto);
+  @Patch(':idL')
+  update(@Param('idL') idL: string, @Body() updateLibroDto: UpdateLibroDto) {
+    return this.librosService.update(idL, updateLibroDto);
   }
 
-  @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.librosService.remove(id);
+  @Delete(':idL')
+  remove(@Param('idL') idL: string) {
+    return this.librosService.remove(idL);
   }
 }

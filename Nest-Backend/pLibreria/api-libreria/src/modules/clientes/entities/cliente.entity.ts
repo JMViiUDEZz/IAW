@@ -38,7 +38,7 @@ export class Cliente {
           // lo mas sensato sería establecer la relación con eliminación en cascada,
           // haciéndolo de esta manera: { cascade: true, eager: true }
           // en nuestro caso, no
-          { cascade: false }
+          { cascade: false, eager: false }
      )
      libros?: Libro[];
 

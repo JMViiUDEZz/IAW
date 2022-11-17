@@ -27,7 +27,7 @@ export class LibrosService {
       
       // DESPUES DE RELACION
       // prepara la consulta
-      // const id = createLibroDto.idCliente;
+      // const idC = createLibroDto.idCliente;
       const { idCliente, ...campos } = createLibroDto;
       console.log({ ...campos });
       const cliente = this.clientesService.findOne( idCliente );
@@ -38,7 +38,7 @@ export class LibrosService {
       return libro;
     } catch (error) {
       console.log(error);
-      throw new InternalServerErrorException('Ayuda!')
+      throw new InternalServerErrorException('Error en BD!')
     }
   }
   
@@ -48,15 +48,15 @@ export class LibrosService {
 
   }
 
-  findOne(id: string) {
-    return `This action returns a #${id} libro`;
+  findOne(idL: string) {
+    return `This action returns a #${idL} libro`;
   }
 
-  update(id: string, updateLibroDto: UpdateLibroDto) {
-    return `This action updates a #${id} libro`;
+  update(idL: string, updateLibroDto: UpdateLibroDto) {
+    return `This action updates a #${idL} libro`;
   }
 
-  remove(id: string) {
-    return `This action removes a #${id} libro`;
+  remove(idL: string) {
+    return `This action removes a #${idL} libro`;
   }
 }
