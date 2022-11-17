@@ -19,16 +19,16 @@ export class LibrosController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.librosService.findOne(+id);
+    return this.librosService.findOne(id);
   }
 
   @Patch(':id')
   update(@Param('id') id: string, @Body() updateLibroDto: UpdateLibroDto) {
-    return this.librosService.update(+id, updateLibroDto);
+    return this.librosService.update(id, updateLibroDto);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.librosService.remove(+id);
+    return this.librosService.remove(id);
   }
 }

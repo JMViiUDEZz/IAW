@@ -10,7 +10,7 @@ import { ClientesModule } from '../clientes/clientes.module';
   providers: [LibrosService],
   imports: [
     ClientesModule,
-    TypeOrmModule.forFeature([Libro]) //importamos todas las entidades
+    TypeOrmModule.forFeature([Libro])
   ],
   exports: [ LibrosService, TypeOrmModule ]
 })

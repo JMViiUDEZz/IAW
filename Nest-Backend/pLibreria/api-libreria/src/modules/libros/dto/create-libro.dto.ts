@@ -40,5 +40,5 @@ export class CreateLibroDto {
     status?: string;
 
     @IsString()
-    idCliente: string;
+    idCliente?: string;
 }

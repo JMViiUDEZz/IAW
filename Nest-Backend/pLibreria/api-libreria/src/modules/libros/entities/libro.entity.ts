@@ -3,8 +3,8 @@ import { Cliente } from '../../clientes/entities/cliente.entity';
 
 @Entity({ name: 'libros' })
 export class Libro {
-     @PrimaryGeneratedColumn('increment')
-     id: number;
+     @PrimaryGeneratedColumn('uuid')
+     id: string;
  
      @Column('text', {
           unique: true,

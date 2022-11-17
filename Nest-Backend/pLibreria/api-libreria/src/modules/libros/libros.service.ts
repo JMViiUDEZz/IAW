@@ -26,9 +26,16 @@ export class LibrosService {
       // return libro;
       
       // DESPUES DE RELACION
-      const id = +createLibroDto.idCliente;
-      const cliente = this.clientesService.findOne(id);
-      return cliente;
+      // prepara la consulta
+      // const id = createLibroDto.idCliente;
+      const { idCliente, ...campos } = createLibroDto;
+      console.log({ ...campos });
+      const cliente = this.clientesService.findOne( idCliente );
+      const libro = this.libroRepository.create({ ...campos });
+      libro.cliente = await this.clientesService.findOne( idCliente );
+      // se lanza la peticion al SGBD (postgres) --> esperar (x segundos)
+      await this.libroRepository.save( libro );
+      return libro;
     } catch (error) {
       console.log(error);
       throw new InternalServerErrorException('Ayuda!')
@@ -41,15 +48,15 @@ export class LibrosService {
 
   }
 
-  findOne(id: number) {
+  findOne(id: string) {
     return `This action returns a #${id} libro`;
   }
 
-  update(id: number, updateLibroDto: UpdateLibroDto) {
+  update(id: string, updateLibroDto: UpdateLibroDto) {
     return `This action updates a #${id} libro`;
   }
 
-  remove(id: number) {
+  remove(id: string) {
     return `This action removes a #${id} libro`;
   }
 }
