@@ -4,7 +4,7 @@ import { Libro } from '../../libros/entities/libro.entity';
 @Entity({ name: 'clientes' })
 export class Cliente {
      @PrimaryGeneratedColumn('uuid')
-     id: string;
+     idC: string;
 
      @Column('text', {
           unique: true,
