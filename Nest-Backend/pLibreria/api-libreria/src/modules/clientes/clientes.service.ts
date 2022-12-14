@@ -53,4 +53,19 @@ export class ClientesService {
   remove(idC: string) {
     return `This action removes a #${idC} cliente`;
   }
+
+  async deleteAllClientes() {
+    const query = this.clienteRepository.createQueryBuilder('cliente');
+
+    // try {
+      return await query
+        .delete()
+        .where({})
+        .execute();
+
+    // } catch (error) {
+    //   this.handleDBExceptions(error);
+    // }
+
+  }
 }
