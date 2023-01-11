@@ -1,0 +1,79 @@
+[
+    {
+        "jmvpcod": "Proy1",
+        "jmvpnombre": "Proyector Samsung S1",
+        "jmvptipo": "Proyector",
+        "jmvpaño": 2017,
+        "jmvpaula": "B3"
+    },
+    {
+        "jmvpcod": "Ord1",
+        "jmvpnombre": "Portatil Dell D1",
+        "jmvptipo": "Ordenador",
+        "jmvpaño": 2020,
+        "jmvpaula": "B3"
+    },
+    {
+        "jmvpcod": "Proy2",
+        "jmvpnombre": "Proyector Nec N1",
+        "jmvptipo": "Proyector",
+        "jmvpaño": 2017,
+        "jmvpaula": "B1"
+    },
+    {
+        "jmvpcod": "Ord2",
+        "jmvpnombre": "Portatil Lenovo L1",
+        "jmvptipo": "Ordenador",
+        "jmvpaño": 2020,
+        "jmvpaula": "B1"
+    },
+    {
+        "jmvpcod": "Ord3",
+        "jmvpnombre": "Portatil Lenovo L2",
+        "jmvptipo": "Ordenador",
+        "jmvpaño": 2020,
+        "jmvpaula": "B2"
+    },
+    {
+        "jmvpcod": "Proy3",
+        "jmvpnombre": "Proyector Nec N2",
+        "jmvptipo": "Proyector",
+        "jmvpaño": 2018,
+        "jmvpaula": "B2"
+    },
+    {
+        "jmvpcod": "Piz1",
+        "jmvpnombre": "Pizarra Digital Promethean P1",
+        "jmvptipo": "Pizarra Digital",
+        "jmvpaño": 2010,
+        "jmvpaula": "B2"
+    },
+    {
+        "jmvpcod": "Ord4",
+        "jmvpnombre": "Portatil Nec N3",
+        "jmvptipo": "Ordenador",
+        "jmvpaño": 2020,
+        "jmvpaula": "C1"
+    },
+    {
+        "jmvpcod": "Proy4",
+        "jmvpnombre": "Proyector Samsung S2",
+        "jmvptipo": "Proyector",
+        "jmvpaño": 2016,
+        "jmvpaula": "C1"
+    },
+    {
+        "jmvpcod": "Piz2",
+        "jmvpnombre": "Pizarra Digital Smart S1",
+        "jmvptipo": "Pizarra Digital",
+        "jmvpaño": 2020,
+        "jmvpaula": "C1"
+    },
+    {
+        "jmvpcod": "Alt1",
+        "jmvpnombre": "Altavoces Lenovo A1",
+        "jmvptipo": "Altavoces",
+        "jmvpaño": 2022,
+        "jmvpaula": "C1"
+    }
+]

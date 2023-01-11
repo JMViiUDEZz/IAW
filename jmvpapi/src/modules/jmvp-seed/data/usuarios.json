@@ -1,0 +1,56 @@
+[
+    {
+        "jmvpidea": "jmb3476",
+        "jmvpnombre": "Jose Antonio Morgado",
+        "jmvpemail": "morgado@gmail.com",
+        "jmvppassword": "1234",
+        "jmvprol": "coordinador Tic",
+        "jmvpisActive": true
+
+    },
+    {
+        "jmvpidea": "gin1234",
+        "jmvpnombre": "Gines Martínez",
+        "jmvpemail": "gines@gmail.com",
+        "jmvppassword": "1234",
+        "jmvprol": "coordinador Tic",
+        "jmvpisActive": true
+    },
+    {
+        "jmvpidea": "pil3425",
+        "jmvpnombre": "Pilar del Campo",
+        "jmvpemail": "pilar@gmail.com",
+        "jmvppassword": "1234",
+        "jmvprol": "profesor",
+        "jmvpisActive": true
+    },
+    {
+        "jmvpidea": "ang2617",
+        "jmvpnombre": "Ana Gonzalez",
+        "jmvpemail": "anag@gmail.com",
+        "jmvppassword": "1234",
+        "jmvprol": "administrador",
+        "jmvpisActive": true
+
+    },
+    {
+        "jmvpidea": "sof2132",
+        "jmvpnombre": "Sofía Fernández",
+        "jmvpemail": "sofia@gmail.com",
+        "jmvppassword": "1234",
+        "jmvprol": "profesor",
+        "jmvpisActive": true
+
+    },
+    {
+        "jmvpidea": "moi1134",
+        "jmvpnombre": "Moisés Barranco",
+        "jmvpemail": "moises@gmail.com",
+        "jmvppassword": "1234",
+        "jmvprol": "coordinador Tic",
+        "jmvpisActive": true
+
+    }
+
+
+]

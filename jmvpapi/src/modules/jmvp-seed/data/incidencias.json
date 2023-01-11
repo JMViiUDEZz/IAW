@@ -1,0 +1,36 @@
+[
+    {
+        "jmvpidea":"ang2617",
+        "jmvpcod":"Proy4",
+        "jmvpdescripcion":"El proyector del aula C1 ilumina muy poco",
+        "jmvpfecha": "13/12/2022",
+        "jmvpstatus": "en proceso"
+    },
+    {
+        "jmvpidea":"pil3425",
+        "jmvpcod":"Piz2",
+        "jmvpdescripcion":"La pizarra está muy deteriorada",
+        "jmvpfecha": "3/12/2022"
+    },
+    {
+        "jmvpidea":"ang2617",
+        "jmvpcod":"Alt1",
+        "jmvpdescripcion":"No se encuentran los altavoces del aula C1",
+        "jmvpfecha": "23/10/2022",
+        "jmvpstatus": "finalizada"
+    },
+    {
+        "jmvpidea":"sof2132",
+        "jmvpcod":"Ord1",
+        "jmvpdescripcion":"El ordenador del aula no arranca",
+        "jmvpfecha": "02/11/2022",
+        "jmvpstatus": "finalizada"
+    },
+    {
+        "jmvpidea":"ang2617",
+        "jmvpcod":"Ord3",
+        "jmvpdescripcion":"El ordenador va muy lento",
+        "jmvpfecha": "10/12/2022",
+        "jmvpstatus": "en proceso"
+    }
+]
